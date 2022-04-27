@@ -25,3 +25,13 @@ let pokemonList = [
     evolutions: ['Pichu', 'Pikachu', 'Raichu']
   }
 ];
+
+// For loop to list all pokemon name and height in pokemonList
+for (i = 0; i < pokemonList.length; i++) {
+  // If else statement to determine if the height of the pokemon is over 2
+  if (pokemonList[i].height > 2) {
+    document.write(pokemonList[i].name + ": (" + pokemonList[i].height + ") " + " - Wow that's a LARGE Pokemon! ")
+  } else {
+    document.write(pokemonList[i].name + ": (" + pokemonList[i].height + ") " );
+  }
+}
