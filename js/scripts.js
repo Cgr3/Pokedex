@@ -1,4 +1,5 @@
 let pokemonList = [
+  // pokemon height is in meters
   {
     name: 'Alakazam',
     height: 1.5,
