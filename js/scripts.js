@@ -1,3 +1,6 @@
+//IIFE to stop global state
+let pokemonRepository = (function() {
+
   let pokemonList = [
     // pokemon height is in meters
     {
@@ -26,16 +29,22 @@
     }
   ];
 
-pokemonList.forEach(function(pokemon) {
-  document.write(pokemon.name + ': ' + pokemon.height + ' ' + pokemon.type + ' ' + pokemon.evolutions + ' ')
-});
+  //Add pokemon to list
+  function add(pokemon) {
+    pokemonList.push(pokemon);
+  }
 
-// For loop to list all pokemon name and height in pokemonList
-//for (i = 0; i < pokemonList.length; i++) {
-//  // If else statement to determine if the height of the pokemon is over 2
-//  if (pokemonList[i].height > 2) {
-//    document.write(pokemonList[i].name + ": (" + pokemonList[i].height + ") " + " - Wow that's a LARGE Pokemon! ")
-//  } else {
-//    document.write(pokemonList[i].name + ": (" + pokemonList[i].height + ") " );
-//  }
-//}
+  //Pull list of all pokemon
+  function getAll() {
+    return pokemonList;
+  }
+  
+  return {
+    add: add,
+    getAll: getAll
+  }
+})()
+
+pokemonRepository.getAll().forEach(function(pokemon) {
+  document.write(pokemon.name + ' ' + pokemon.height + ' ' + pokemon.type + ' ' + pokemon.evolutions);
+});
