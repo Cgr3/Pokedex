@@ -29,7 +29,7 @@ let pokemonRepository = (function() {
     }
   ];
 
-  //Add pokemon to list
+  // Add pokemon to list
   function add(pokemon) {
     pokemonList.push(pokemon);
   }
