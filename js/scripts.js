@@ -39,12 +39,31 @@ let pokemonRepository = (function() {
     return pokemonList;
   }
 
+  function addListItem(pokemon) {
+    let pokedex = document.querySelector(".poke-list");
+    let listpokemon = document.createElement("li");
+    let button = document.createElement("button");
+    button.innerText = pokemon.name;
+    button.classList.add("button-class");
+    listpokemon.appendChild(button);
+    pokedex.appendChild(listpokemon);
+    button.addEventListener('click', function(event) {
+      showDetails(pokemon);
+    });
+  }
+
+  function showDetails(pokemon) {
+    console.log(pokemon.name);
+  }
+
   return {
     add: add,
-    getAll: getAll
+    getAll: getAll,
+    addListItem: addListItem,
+    showDetails: showDetails
   }
 })()
 
 pokemonRepository.getAll().forEach(function(pokemon) {
-  document.write(pokemon.name + ' ' + pokemon.height + ' ' + pokemon.type + ' ' + pokemon.evolutions);
+  pokemonRepository.addListItem(pokemon);
 });
