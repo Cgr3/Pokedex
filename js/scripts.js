@@ -91,14 +91,18 @@ let pokemonRepository = (function() {
 
       //creating text in modal
       let titleElement = document.createElement('h1');
-      titleElement.innerText = pokemon.name;
+      titleElement.innerText = pokemon.name.toUpperCase();
 
       let contentElement = document.createElement('p');
       contentElement.innerText = 'Height: ' + pokemon.height;
 
+      let imageElement = document.createElement('img');
+      imageElement.src = pokemon.imageUrl;
+
       modal.appendChild(closeButtonElement);
       modal.appendChild(titleElement);
       modal.appendChild(contentElement);
+      modal.appendChild(imageElement);
       modalContainer.appendChild(modal);
 
       //changing visibility
