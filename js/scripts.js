@@ -128,10 +128,6 @@ let pokemonRepository = (function() {
       }
     });
 
-    document.querySelector('#show-modal').addEventListener('click', () => {
-      showModal();
-    });
-
   return {
     add: add,
     getAll: getAll,
