@@ -1,7 +1,7 @@
-#**A mini javascript project:**
+# **A mini javascript project:**
 
 
-##**Languages Used:**
-###-html
-###-css
-###-javascript
+## **Languages Used:**
+* -html
+* -css
+* -javascript
