@@ -2,8 +2,8 @@
 
 ## **Goal: **
 
-### To showcase a Simple JS App that fetches data from an API
-### Then uses said API to show details upon click of buttons 
+### To showcase a Simple JS App that fetches data from a public API
+### Then uses the data to show details corresponding with correct Pokemon!
 
 ## **Languages Used:**
 * -html
