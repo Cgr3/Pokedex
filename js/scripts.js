@@ -23,10 +23,13 @@ let pokemonRepository = (function() {
 		let pokeItem = document.createElement('li');
 		//adding classList to li
 		pokeItem.classList.add('group-pokemon-list');
+		pokeItem.classList.add('list-group-item');
 		//creating button
 		let button = document.createElement('button');
 		button.innerText = pokemon.name;
 		button.classList.add('button-class');
+		button.classList.add('btn');
+		button.classList.add('btn-primary');
 		button.setAttribute('data-toggle', 'modal');
 		button.setAttribute('data-target', '#pokemonModal');
 		pokeItem.appendChild(button);
