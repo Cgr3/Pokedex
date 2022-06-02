@@ -5,24 +5,6 @@
 * Browsers: last 4 version
 */
 
-.button-class {
-  background-color: #FFFF00;
-  border: none;
-  padding: 20px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 25px;
-  margin: 4px 2px;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  -o-transition-duration: 0.4s;
-     transition-duration: 0.4s;
-  cursor: pointer;
-  background-color: blue;
-  color: gold;
-  border: 2px solid #4caf50;
-}
-
 nav {
   background-color: red;
 }
