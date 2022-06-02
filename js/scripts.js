@@ -108,6 +108,7 @@ let pokemonRepository = (function() {
 		//creating weight element in modal
 		let pokemonWeight = $('<p>' + 'weight : ' + pokemon.weight + '</p>');
 		let modalText = document.createElement('p');
+		modalText.innerText += 'types: ';
 		/* eslint-enable */
 
 		//ForEach loop creating pokemon
@@ -127,6 +128,7 @@ let pokemonRepository = (function() {
 		modalBody.append(imageUrl);
 		modalBody.append(pokemonHeight);
 		modalBody.append(pokemonWeight);
+		modalBody.append(modalText);
 	}
 
 	return {
